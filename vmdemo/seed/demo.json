@@ -1,0 +1,116 @@
+[
+  {
+    "model": "polls.question",
+    "pk": 1,
+    "fields": {
+      "question_text": "How are you?",
+      "pub_date": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "polls.question",
+    "pk": 2,
+    "fields": {
+      "question_text": "What is the the Answer to the Ultimate Question of Life, the Universe, and Everything?",
+      "pub_date": "1979-10-12T00:00:00Z"
+    }
+  },
+  {
+    "model": "polls.question",
+    "pk": 3,
+    "fields": {
+      "question_text": "Do you like the demo?",
+      "pub_date": "2023-05-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "choice_text": "I'm fine",
+      "votes": 102
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 2,
+    "fields": {
+      "question": 1,
+      "choice_text": "I'm OK",
+      "votes": 98
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 3,
+    "fields": {
+      "question": 1,
+      "choice_text": "I'm good",
+      "votes": 103
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 4,
+    "fields": {
+      "question": 2,
+      "choice_text": "42",
+      "votes": 568
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 5,
+    "fields": {
+      "question": 2,
+      "choice_text": "7",
+      "votes": 0
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 6,
+    "fields": {
+      "question": 2,
+      "choice_text": "256",
+      "votes": 1
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 7,
+    "fields": {
+      "question": 3,
+      "choice_text": "Yes",
+      "votes": 57
+    }
+  },
+  {
+    "model": "polls.choice",
+    "pk": 8,
+    "fields": {
+      "question": 3,
+      "choice_text": "No",
+      "votes": 3
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$ZqOAZC2NBKmv09mXFoGD7I$cVk1ZMl3fZlLlI+pcBBGt1NtCowa07H5LGgr8fUuEdA=",
+      "last_login": "2023-05-03T22:27:53.694Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-05-03T22:27:31.145Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
