@@ -14,20 +14,14 @@ sudo -u postgres createdb vmdemo
 sudo -u postgres psql -c "CREATE ROLE vmdemo WITH LOGIN PASSWORD 'vmdemo'"
 sudo -u postgres psql -c "ALTER DATABASE vmdemo OWNER TO vmdemo"
 
-# Install Python 3
-sudo apt-get -y install python3 python3-dev python3-pip python3-pip python3-venv
+# Make PostgreSQL listen on all IPs and allow connections from any IP
+cat <<EOF | sudo tee -a /etc/postgresql/15/main/postgresql.conf
+listen_addresses = '*'
+EOF
 
-# Create Python virtualenv
-python3 -m venv ~/.venv/vmdemo
-source ~/.venv/vmdemo/bin/activate
+cat <<EOF | sudo tee -a /etc/postgresql/15/main/pg_hba.conf
+host    all             all             0.0.0.0/0            md5
+EOF
 
-# Upgrade pip
-python -m pip install -U pip
+sudo service postgresql restart
 
-# Install pip packages
-cd /vagrant/vmdemo
-python -m pip install -r requirements.txt
-
-# Bootstrap the DB
-python3 manage.py migrate
-python3 manage.py loaddata seed/demo.json
