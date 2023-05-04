@@ -27,3 +27,7 @@ python -m pip install -U pip
 # Install pip packages
 cd /vagrant/vmdemo
 python -m pip install -r requirements.txt
+
+# Bootstrap the DB
+python3 manage.py migrate
+python3 manage.py loaddata seed/demo.json
