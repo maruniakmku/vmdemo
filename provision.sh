@@ -18,12 +18,12 @@ sudo -u postgres psql -c "ALTER DATABASE vmdemo OWNER TO vmdemo"
 sudo apt-get -y install python3 python3-dev python3-pip python3-pip python3-venv
 
 # Create Python virtualenv
-cd /vagrant/vmdemo
-python3 -m venv .env
-source .env/bin/activate
+python3 -m venv ~/.venv/vmdemo
+source ~/.venv/vmdemo/bin/activate
 
 # Upgrade pip
 python -m pip install -U pip
 
 # Install pip packages
+cd /vagrant/vmdemo
 python -m pip install -r requirements.txt
